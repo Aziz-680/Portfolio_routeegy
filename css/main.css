@@ -1,0 +1,652 @@
+/* start global */
+:root {
+    --activeColor: white;
+    --animationTextWidth: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+a,
+p {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: #748182;
+    font-size: 14px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.bg2 {
+    background-color: #f7f7f7;
+}
+
+.bg3 {
+    background-color: #1C1C1C;
+}
+
+h3 {
+    font-weight: 900;
+    font-size: 40px;
+    position: relative;
+    z-index: 4;
+    text-align: center;
+    /* Center the text horizontally */
+    margin: 0 auto;
+    /* Center the element horizontally */
+    display: table;
+    /* Helps with centering the pseudo-element */
+}
+
+h4 {
+    font-size: 25px;
+
+}
+
+h5 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h6 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.1;
+}
+
+.container {
+    width: 55% !important;
+}
+
+.dotbg h3 {
+    font-weight: 900;
+    font-size: 40px;
+    position: relative;
+    z-index: 4;
+    text-align: center;
+    /* Center the text horizontally */
+    margin: 0 auto;
+    /* Center the element horizontally */
+    display: table;
+    /* Helps with centering the pseudo-element */
+}
+
+.dotbg h3::after {
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    /* Ensure the underline spans full width */
+    z-index: -1;
+}
+
+/* start nav */
+nav {
+    z-index: 9999;
+    box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 18px;
+}
+
+.nav-link {
+    font-size: 14px;
+}
+
+.active {
+    position: relative;
+
+}
+
+.nav-link {
+    padding: 0 !important;
+    display: inline;
+}
+
+.active::after {
+    content: '';
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    animation: activeAnimation 0.5s forwards ease;
+    background-color: var(--activeColor);
+    transition: width 0.5s ease;
+}
+
+@keyframes activeAnimation {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, 0.65);
+    overflow: hidden;
+}
+
+#overlay h5 {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.text-changing h1 {
+    white-space: nowrap;
+}
+
+.text-changing h1 span {
+    font-size: 60px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.text-changing h1::after {
+    content: "|";
+    position: relative;
+    font-size: 60px;
+    font-weight: lighter;
+    top: -10px;
+
+}
+
+.text-changing h1 span:nth-child(1) {
+    font-weight: lighter;
+}
+
+.text-changing h1 span:nth-child(2) {
+    font-weight: 400;
+}
+
+.socialIcons .icons {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.socialIcons i {
+    color: #f7f7f7;
+}
+
+.text1 {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: steps(14);
+}
+
+@keyframes eraseAnimation {
+    from {
+        width: var(--animationTextWidth);
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+@keyframes appearAnimation {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: var(--animationTextWidth);
+    }
+}
+
+
+/* end home */
+
+/* start about */
+.about {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.about .image {
+    position: relative;
+}
+
+.about img {
+    vertical-align: middle;
+}
+
+.about .backgroundDots {
+    background-image: url("../images/dots.png");
+
+    width: 100%;
+    height: 75%;
+    background-repeat: repeat;
+    z-index: -1;
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+}
+
+.about h3 {
+    font-size: 30px;
+}
+
+.about .subTitle {
+    color: #999999;
+    font-size: 14px;
+}
+
+.about p {
+    color: #748182;
+    font-size: 14px;
+}
+
+.about .b1 {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+.about .b2 {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.about .b1:hover {
+    background-color: white;
+    color: black
+}
+
+.about .b2:hover {
+    background-color: black;
+    color: white
+}
+
+/* end about */
+
+/* start services */
+.services {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.services .inner-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+
+.services .inner-container .box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 15px;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    width: calc((100% - 40px) / 3);
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+}
+
+
+.services .icons {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    color: black;
+    background-color: #f7f7f7;
+    transition: all 0.5s ease;
+}
+
+.services .inner-container .box:hover {
+    .icons {
+        color: white;
+        background-color: black;
+    }
+}
+
+/* end services */
+
+
+/* start work */
+.works {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.works .menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    gap: 40px;
+}
+
+.works .active::after {
+    background-color: black;
+}
+
+
+.works .All {
+    overflow: hidden;
+    padding: 10px;
+}
+
+.works .overlay {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+
+}
+
+.works .overlay a {
+    display: block;
+    text-align: center;
+    font-size: 12px !important;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 50%;
+    color: white;
+    transform: translateY(40px);
+    background-color: black;
+    transition: all 0.5s ease;
+}
+
+.works .All:hover .overlay {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.works .All:hover a {
+    transform: translateY(0px);
+}
+
+
+
+.works .overlay a:hover {
+    color: black;
+    background-color: white;
+}
+
+
+
+/* end work */
+
+
+/*start clients */
+.clients {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.clients .courselContent {
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 20px;
+    margin-bottom: 20px;
+}
+
+.clients .active::after {
+    background-color: rgb(66, 65, 65);
+    border-radius: 50%;
+    height: 0px;
+    width: 0px;
+}
+
+.clients .carousel-inner img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+
+}
+
+.carousel-indicators [type='button'] {
+    background-color: gray;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    border: 0px;
+}
+
+.stats {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.statistics {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+
+.statistics .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+    width: calc(100% / 4);
+}
+
+
+.statistics svg {
+    font-size: 25px;
+    color: black;
+}
+
+/*end clients */
+
+
+/* start team */
+.team {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.team .inner-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px
+}
+
+.team .inner-container .box {
+    width: calc((100% - 60px) / 3);
+
+}
+
+@media screen and (max-width:988px) {
+    .team .inner-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .team .inner-container .box {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+.team .inner-container .box>div:first-child {
+    position: relative;
+    overflow: hidden;
+}
+
+.team .inner-container .box img {
+    width: 100%;
+    transition: all 1s ease;
+
+}
+
+.team .inner-container .box .overlay {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 10px;
+    transform: scale(0) rotateY(180deg);
+    transition: all 1s ease;
+
+}
+
+
+.team .inner-container .box:hover .overlay {
+    transform: scale(1);
+}
+
+.team .inner-container .box:hover img {
+    transform: scale(1.2);
+}
+
+.team .inner-container .box .overlay a {
+    display: block;
+    text-align: center;
+    font-size: 20px !important;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+}
+
+.team .inner-container .box .overlay a:hover {
+    color: black;
+    background-color: white;
+}
+
+.team .inner-container .box>div:last-child {
+    padding: 10px;
+    background-color: rgba(52, 52, 52, .8);
+    color: white;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+}
+
+/* end team */
+
+/* start contact us */
+.contact {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.contact .info .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: calc(100% / 3);
+    gap: 20px;
+}
+
+.contact .info .box a {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: black;
+    background-color: #f7f7f7;
+    transition: color, background-color 0.6s ease;
+}
+
+.contact .info .box:hover a {
+    color: white;
+    background-color: black;
+}
+
+.contact button {
+    background-color: #1C1C1C;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.contact button:hover {
+    background-color: white;
+    color: #1C1C1C;
+}
+
+/* end contact us */

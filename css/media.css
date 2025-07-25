@@ -1,0 +1,43 @@
+@media screen and (max-width:988px) {
+    #overlay h5 {
+        font-size: 40px;
+        font-weight: 800;
+    }
+
+    .text-changing h1 span {
+        font-size: 50px;
+    }
+
+    .text-changing h1::after {
+
+        font-size: 50px;
+    }
+    .services .boxesContainer .box {
+        font-size: 30px;
+        width: 100%;
+    }
+    .statistics {
+        flex-direction: column;
+    }
+
+    .statistics .box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    #overlay h5 {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .text-changing h1 span {
+        font-size: 30px;
+    }
+
+    .text-changing h1::after {
+
+        font-size: 30px;
+    }
+}
+
