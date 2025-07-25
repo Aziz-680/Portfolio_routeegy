@@ -44,6 +44,7 @@ I welcome contributions to this project\! If you'd like to contribute, please fo
 
 ## 📫 Contact
 
-[abdelazizhisham8@gmail.com]
+[LinkedIn](https://www.linkedin.com/in/abdelaziz-hisham-417945244/): 
 
-Project Link: [https://github.com/Aziz-680/Portfolio\_routeegy](https://github.com/Aziz-680/Portfolio_routeegy)
+[Project Link
+](https://github.com/Aziz-680/Portfolio_routeegy)
